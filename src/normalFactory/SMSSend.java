@@ -1,6 +1,6 @@
 package normalFactory;
 
-public class SMSSend implements SendFactory {
+public class SMSSend implements Send {
 
 	@Override
 	public void send() {

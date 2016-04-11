@@ -1,6 +1,6 @@
 package normalFactory;
 
-public class MailSend implements SendFactory {
+public class MailSend implements Send {
 
 	@Override
 	public void send() {
