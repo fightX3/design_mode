@@ -1,4 +1,4 @@
-package normalFactory;
+package factory.normalFactory;
 
 public class Test {
 	public static void main(String[] args) {

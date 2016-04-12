@@ -1,4 +1,4 @@
-package staticFactory;
+package factory.staticFactory;
 
 public class Test {
 	public static void main(String[] args) {

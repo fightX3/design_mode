@@ -1,4 +1,4 @@
-package staticFactory;
+package factory.multiFactory;
 
 public class SMSSend    {
 

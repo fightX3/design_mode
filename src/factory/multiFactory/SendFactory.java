@@ -1,4 +1,4 @@
-package multiFactory;
+package factory.multiFactory;
 
 public class SendFactory {
 	public MailSend sendMail(){

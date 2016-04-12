@@ -1,4 +1,4 @@
-package normalFactory;
+package factory.normalFactory;
 
 public class SMSSend implements Send {
 

@@ -1,4 +1,4 @@
-package staticFactory;
+package factory.staticFactory;
 
 public class SendFactory {
 	public static MailSend sendMail(){
