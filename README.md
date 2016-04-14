@@ -561,4 +561,52 @@ e>此时B线程打算使用Singleton实例，却发现它没有被初始化，�
 
 最 后一点，单例类比较灵活，毕竟从实现上只是一个普通的Java类，只要满足单例的基本需求，你可以在里面随心所欲的实现一些其它功能，但是静态类不行。从 上面这些概括中，基本可以看出二者的区别，但是，从另一方面讲，我们上面最后实现的那个单例模式，内部就是用一个静态类来实现的，所以，二者有很大的关 联，只是我们考虑问题的层面不同罢了。两种思想的结合，才能造就出完美的解决方案，就像HashMap采用数组+链表来实现一样，其实生活中很多事情都是 这样，单用不同的方法来处理问题，总是有优点也有缺点，最完美的方法是，结合各个方法的优点，才能最好的解决问题！
 
-layuan来源：http://my.oschina.net/tiancai/blog/224624?fromerr=gKz3HrIW
+
+
+4、建造者模式（Builder）
+
+工厂类模式提供的是创建单个类的模式，而建造者模式则是将各种产品集中起来进行管理，用来创建复合对象，所谓复合对象就是指某个类具有不同的属性，其实建造者模式就是前面抽象工厂模式和最后的Test结合起来得到的。我们看一下代码：
+
+还和前面一样，一个Sender接口，两个实现类MailSender和SmsSender。最后，建造者类如下：
+
+    public class Builder {  
+
+        private List<Sender> list = new ArrayList<Sender>();  
+
+        public void produceMailSender(int count){  
+
+            for(int i=0; i<count; i++){  
+
+                list.add(new MailSender());  
+            }  
+        }  
+
+        public void produceSmsSender(int count){  
+
+            for(int i=0; i<count; i++){  
+
+                list.add(new SmsSender());  
+
+            }  
+
+        }  
+
+    }  
+
+测试类：
+
+    public class Test {  
+ 
+        public static void main(String[] args) {  
+
+            Builder builder = new Builder();  
+
+            builder.produceMailSender(10);  
+
+        }  
+
+    }  
+
+从这点看出，建造者模式将很多功能集成到一个类里，这个类可以创造出比较复杂的东西。所以与工程模式的区别就是：工厂模式关注的是创建单个产品，而建造者模式则关注创建符合对象，多个部分。因此，是选择工厂模式还是建造者模式，依实际情况而定。
+
+来源：http://my.oschina.net/tiancai/blog/224624?fromerr=gKz3HrIW
