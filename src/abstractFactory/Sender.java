@@ -1,4 +1,4 @@
-package factory.abstractFactory;
+package abstractFactory;
 
 public interface Sender {
 	public void send();

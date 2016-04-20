@@ -1,4 +1,4 @@
-package factory.abstractFactory;
+package abstractFactory;
 
 public interface Provider {
 	public Sender produce();

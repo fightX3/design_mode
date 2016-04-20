@@ -1,4 +1,4 @@
-package factory.abstractFactory;
+package abstractFactory;
 
 public class SendMailFactory implements Provider {
 
